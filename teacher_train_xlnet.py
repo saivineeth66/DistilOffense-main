@@ -21,8 +21,8 @@ def split(a, n):
 if not os.path.exists(TEMP_DIRECTORY):
     os.makedirs(TEMP_DIRECTORY)
 
-olid_train = pd.read_csv('/content/DistilOffense/data/olid_train.csv', sep="\t")
-olid_test = pd.read_csv('/content/DistilOffense/data/olid_test.csv', sep="\t")
+olid_train = pd.read_csv('/content/DistilOffense-main/data/olid_train.csv', sep="\t")
+olid_test = pd.read_csv('/content/DistilOffense-main/data/olid_test.csv', sep="\t")
 solid = Dataset.to_pandas(load_dataset('tharindu/SOLID', split='train', sep="\t"))
 
 olid_test_sentences = olid_test["Text"].to_list()
